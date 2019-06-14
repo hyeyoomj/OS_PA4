@@ -27,4 +27,6 @@ main()
 	p4 = smalloc(1000) ; 
 	printf("smalloc(1000)\n") ; 
 	print_sm_containers() ;
+	
+	print_sm_uses() ;
 }
