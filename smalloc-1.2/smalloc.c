@@ -44,7 +44,7 @@ void * smalloc(size_t size)
 	sm_container_ptr itr = 0x0 ;
 	sm_container_ptr next = 0x0 ;
 
-	int smallest = -1 ;
+	int smallest = 10000 ;
 
 	for (itr = sm_first ; itr != 0x0 ; itr = itr->next) {
 		if (itr->status == Busy)
@@ -117,6 +117,7 @@ void sfree(void * p)
 			if (itr->next->next != 0x0) {
 				cont->next = itr->next ;
 				itr->next = itr->next->next ;
+				cont = itr->next ;
 			}
 			else {
 				itr->next = 0x0 ;
