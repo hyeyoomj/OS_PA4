@@ -43,7 +43,7 @@ void * smalloc(size_t size)
 	sm_container_ptr hole = 0x0 ;
 	sm_container_ptr itr = 0x0 ;
 
-	int smallest = -1 ;
+	int smallest = 10000 ;
 
 	for (itr = sm_first ; itr != 0x0 ; itr = itr->next) {
 		if (itr->status == Busy)
